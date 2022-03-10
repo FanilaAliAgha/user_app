@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".joffer3">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/orangecolor"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_baseline_arrow_backnew"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        app:layout_constraintTop_toBottomOf="@+id/linear1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <EditText
+            android:id="@+id/companyname"
+            android:layout_width="385dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boders"
+            android:hint="Company Name"
+            android:paddingLeft="20dp"
+            android:textColorHint="@color/orangecolor" />
+
+        <EditText
+            android:id="@+id/contactNo"
+            android:layout_width="385dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/companyname"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/boders"
+            android:hint="Contact No."
+            android:textColorHint="@color/orangecolor"
+            android:inputType="phone"
+            android:paddingStart="20dp" />
+
+        <EditText
+            android:id="@+id/area"
+            android:layout_width="385dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/contactNo"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/boders"
+            android:hint="Area"
+            android:textColorHint="@color/orangecolor"
+            android:inputType="phone"
+            android:paddingStart="20dp" />
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="385dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/area"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/boders"
+            android:ems="10"
+            android:hint="Title"
+            android:textColorHint="@color/orangecolor"
+            android:inputType="text"
+            android:paddingStart="20dp" />
+
+<LinearLayout
+    android:id="@+id/linlayout"
+    android:layout_below="@id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/salary"
+        android:layout_width="176dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/boders"
+        android:ems="10"
+        android:layout_marginLeft="4dp"
+        android:textColorHint="@color/orangecolor"
+        android:hint="Offer Salary"
+        android:inputType="text"
+        android:paddingStart="20dp" />
+
+    <EditText
+        android:id="@+id/fulltime"
+        android:layout_width="176dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="15dp"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+        android:background="@drawable/boders"
+        android:ems="10"
+        android:textColorHint="@color/orangecolor"
+        android:hint="Full Time"
+        android:inputType="text"
+        android:paddingStart="20dp" />
+
+
+</LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linlayout"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/category"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/salary"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/boders"
+                android:ems="10"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+                android:textColorHint="@color/orangecolor"
+                android:hint="Category"
+                android:inputType="text"
+                android:paddingStart="20dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/ic_baseline_arrow_upward_24"
+                android:layout_marginLeft="15dp"
+                android:text="Upload"
+                android:textStyle="bold"
+                android:layout_marginTop="7dp"
+                android:textSize="12sp"
+                android:background="@color/orangecolor"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear3"
+            android:layout_marginTop="36dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/bottom_bar"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orangecolor"
+        android:duplicateParentState="true"
+        app:abb_animationDuration="10"
+        app:abb_badgeTextColor="@color/white"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorColor="@color/white"
+        app:abb_indicatorHeight="4dp"
+        app:abb_indicatorMargin="16dp"
+        app:abb_rippleColor="@color/white"
+        app:abb_rippleEnabled="true"
+        app:abb_selectedIndex="1"
+        app:abb_selectedTabType="text"
+        app:abb_tabAnimationSelected="fade"
+        app:abb_tabColor="@color/white"
+        app:abb_tabColorDisabled="@color/white"
+        app:abb_tabColorSelected="@color/white"
+        app:abb_tabs="@menu/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

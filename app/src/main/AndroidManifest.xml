@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projectnew">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_baseline_person"
+        android:label="User"
+        android:roundIcon="@drawable/ic_baseline_person"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Projectnew">
+        <activity android:name=".buy4" />
+        <activity android:name=".buy3" />
+        <activity android:name=".buy2" />
+        <activity android:name=".buy1" />
+        <activity android:name=".joffer4" />
+        <activity android:name=".joffer3" />
+        <activity android:name=".joffer2" />
+        <activity android:name=".joffer1" />
+        <activity android:name=".jobsearch4" />
+        <activity android:name=".jobsearch3" />
+        <activity android:name=".jobsearch2" />
+        <activity android:name=".jobsearch1" />
+        <activity android:name=".career1" />
+        <activity android:name=".service5" />
+        <activity android:name=".service4" />
+        <activity android:name=".service3" />
+        <activity android:name=".service2" />
+        <activity android:name=".service1" />
+        <activity android:name=".shop9" />
+        <activity android:name=".shop8" />
+        <activity android:name=".shop7" />
+        <activity android:name=".shop6" />
+        <activity android:name=".shop5" />
+        <activity android:name=".shop4" />
+        <activity android:name=".shop3" />
+        <activity android:name=".shop2" />
+        <activity android:name=".shop1" />
+        <activity android:name=".Screentwentytwo" />
+        <activity android:name=".Screentwentyone" />
+        <activity android:name=".Screentwenty" />
+        <activity android:name=".Screennineteen" />
+        <activity android:name=".Screeneighteen" />
+        <activity android:name=".Screenseventeen" />
+        <activity android:name=".Screensixteen" />
+        <activity android:name=".Screenfifteen" />
+        <activity android:name=".screenfourteen" />
+        <activity android:name=".Screenthirteen" />
+        <activity android:name=".Screentwelve" />
+        <activity android:name=".Screeneleven" />
+        <activity android:name=".Screenten" />
+        <activity android:name=".Screennine" />
+        <activity android:name=".Screeneight" />
+        <activity android:name=".screenseven" />
+        <activity android:name=".Screensix" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".Otppage" />
+        <activity android:name=".Signup" />
+        <activity android:name=".Login" />
+        <activity android:name=".Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

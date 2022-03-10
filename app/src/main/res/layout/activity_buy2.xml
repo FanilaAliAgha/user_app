@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buy2">
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/orangecolor"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_baseline_arrow_backnew" />
+
+
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_baseline_search" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="385dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boders"
+            android:hint="Title"
+            android:paddingLeft="20dp"
+            android:textColorHint="@color/orangecolor"
+            tools:ignore="NotSibling" />
+
+        <EditText
+            android:id="@+id/category"
+            android:layout_width="385dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/boders"
+            android:hint="Category"
+            android:inputType="phone"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/orangecolor" />
+
+
+        <LinearLayout
+            android:id="@+id/linlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/category"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/salary"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/boders"
+                android:ems="10"
+                android:hint="Min Range"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:textColorHint="@color/orangecolor" />
+
+            <EditText
+                android:id="@+id/fulltime"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/boders"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+                android:ems="10"
+                android:hint="Max Range"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:textColorHint="@color/orangecolor" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/area"
+            android:layout_width="385dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/linlayout"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/boders"
+            android:hint="Area"
+            android:inputType="phone"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/orangecolor" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area"
+            android:layout_marginTop="36dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/filter"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/orangecolor"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/orangecolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear1"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="7dp"
+            android:paddingLeft="10dp"
+            android:text="Filter"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_baseline_format_align_left_24" />
+    </androidx.cardview.widget.CardView>
+
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/bottom_bar"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orangecolor"
+        android:duplicateParentState="true"
+        app:abb_animationDuration="10"
+        app:abb_badgeTextColor="@color/white"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorColor="@color/white"
+        app:abb_indicatorHeight="4dp"
+        app:abb_indicatorMargin="16dp"
+        app:abb_rippleColor="@color/white"
+        app:abb_rippleEnabled="true"
+        app:abb_selectedIndex="1"
+        app:abb_selectedTabType="text"
+        app:abb_tabAnimationSelected="fade"
+        app:abb_tabColor="@color/white"
+        app:abb_tabColorDisabled="@color/white"
+        app:abb_tabColorSelected="@color/white"
+        app:abb_tabs="@menu/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
